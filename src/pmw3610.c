@@ -630,7 +630,7 @@ static int pmw3610_report_data(const struct device *dev) {
     int16_t raw_y =
         TOINT16((buf[PMW3610_Y_L_POS] + ((buf[PMW3610_XY_H_POS] & 0x0F) << 8)), 12) / dividor;
 
-#ifdef CONFIG_PMW3610_ADJUSTABLE_MOUSESPEED
+//#ifdef CONFIG_PMW3610_ADJUSTABLE_MOUSESPEED
     int16_t movement_size = abs(raw_x) + abs(raw_y);
 
     float speed_multiplier = 1.0; //速度の倍率
@@ -649,7 +649,7 @@ static int pmw3610_report_data(const struct device *dev) {
     raw_x = raw_x * speed_multiplier;
     raw_y = raw_y * speed_multiplier;
 
-#endif
+//#endif
 
     int16_t x;
     int16_t y;

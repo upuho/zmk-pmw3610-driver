@@ -159,9 +159,9 @@ config PMW3610_AUTOMOUSE_TIMEOUT_MS
   int "Amount of milliseconds the mouse layer will be active after using the trackball"
   default 400
 
-config PMW3610_ADJUSTABLE_MOUSESPEED
-  int "RortaryMouse Controll"
-  default 1
+#config PMW3610_ADJUSTABLE_MOUSESPEED
+#  int "RortaryMouse Controll"
+#  default 1
 
 module = PMW3610
 module-str = PMW3610
